@@ -17,6 +17,12 @@ gulp.task('info',function(){
   console.info('TodoVue App');
 });
 
+gulp.task('bower', function () {
+  gulp.src('app/index.html')
+    .pipe(wiredep({ignorePath: /^(\.\.\/)*\.\./}))
+    .pipe(gulp.dest('app'));
+});
+
 // Watch file changes
 gulp.task('watch',function(){
   gulp.watch('./app/js/**/*.js',function(){
@@ -30,12 +36,21 @@ gulp.task('watch',function(){
 // Browser-sync
 // Static server
 gulp.task('browser-sync', function() {
+
     browserSync.init({
-        server: {
-            baseDir: "./app/"
-        }
-    });
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['app'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+    
 });
+
+
 
 
 gulp.task('default',['info','watch','browser-sync']);
