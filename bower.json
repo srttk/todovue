@@ -1,0 +1,21 @@
+{
+  "name": "todovue",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Sarath <sarath.hacks@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "~1.0.4"
+  }
+}
