@@ -13,12 +13,15 @@
         <header>
           <h1>Todo</h1>
         </header>
-        <section>
+        <section class="post-area">
           <input class="input-text" type="text" v-model="todo">
-          <p>{{todo}}</p>
-          <p><button class="input-button" v-on:click="addTodo()">Post</button></p>
+          
+          <p class="post-controls">
+            <button class="input-button" v-on:click="addTodo()">Post</button>
+            <button class="input-button red" v-on:click="addTodo()">Cancel</button>
+          </p>
         </section>
-        <section>
+        <section class="list-todos">
           <ul>
             <li v-for="t in todos">{{t}}</li>
           </ul>
