@@ -2,15 +2,16 @@
 	var app = new Vue({
 		el:'#app',
 		data:{
-			todo:'Hello world',
+			todo:'',
 			todos:['One','Two']
 		},
-		methods:function(){
-			this.addTodo = function(){
-				alert('asAS');
+		methods:{
+			 addTodo:function(){
+				
 				this.todo.trim();
 				if(this.todo) {
 					this.todos.unshift(this.todo);
+					this.todo = '';
 				}
 			}
 		}

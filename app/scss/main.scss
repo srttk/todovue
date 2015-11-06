@@ -16,6 +16,9 @@ $brd-radius:3px;
 	padding:5px 15px;
 	border-radius: $brd-radius;
 	min-height: 450px;
+	&@media screen (max-width: 480px){
+		width:90%;
+	}
 }
 
 .input-text{
