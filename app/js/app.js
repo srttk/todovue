@@ -18,6 +18,9 @@
             removeTodo:function(todo){
                 var index = this.todos.indexOf(todo);
                 this.todos.splice(index,1);
+            },
+            cancelEntry:function(){
+            	this.todo = '';
             }
 		}
 	});

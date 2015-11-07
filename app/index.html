@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TodoVue</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <!-- bower:css -->
     <!-- endbower -->
@@ -18,7 +19,7 @@
           
           <p class="post-controls">
             <button class="input-button" v-on:click="addTodo()">Add</button>
-            <button class="input-button red" v-on:click="addTodo()">Cancel</button>
+            <button class="input-button red" v-on:click="cancelEntry()">Cancel</button>
           </p>
         </section>
         <section class="list-todos">
