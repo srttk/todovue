@@ -12,13 +12,10 @@ $brd-radius:3px;
 .wrap{
 	width:50%;
 	margin:10px auto;
-	background-color:#ccc;
+	background-color:#ddd;
 	padding:5px 15px;
 	border-radius: $brd-radius;
 	min-height: 450px;
-	&@media screen (max-width: 480px){
-		width:90%;
-	}
 }
 
 .input-text{
@@ -27,14 +24,18 @@ $brd-radius:3px;
 	border: none;
 	font-size: 15px;
 	border-radius: 3px;
+	font-size:30px;
+	outline:none;
+	color:#888;
 }
 .input-button{
 	background-color: #0687C7;
 	border: 1px solid #037FBD;
 	font-size: 15px;
-	padding: 2.5px 5px;
+	padding: 8px 5px;
 	color: white;
-	border-radius: $brd-radius;
+	border-radius: 1px;
+	min-width:100px;
 	&.red{
 
 	background-color: #F94759;
@@ -50,7 +51,7 @@ $brd-radius:3px;
 		/*margin-top: 5px;
 		margin-bottom: 5px;*/
 	    float: right;
-	    padding: 5px;
+	    padding: 5px 0px;
 	}
 	.post-controls:after{
 		content: "";
@@ -67,7 +68,25 @@ $brd-radius:3px;
 			background: #fff;
 			margin-bottom: 5px;
 			padding: 4px;
+			font-size:30px;
 			border-radius: $brd-radius;
+			.opts{
+				float:right;
+				position:relative;
+				top:-3px;
+				.btn-remove{
+					background:none;
+					color:#ccc;
+					border:none;
+					font-size:36px;
+				}
+
+				&:after{
+					clear:right;
+				}
+
+			}
+
 
 		}
 

@@ -14,16 +14,19 @@
           <h1>Todo</h1>
         </header>
         <section class="post-area">
-          <input class="input-text" type="text" v-model="todo">
+          <input class="input-text" type="text" v-model="todo" v-on:keyup.enter="addTodo">
           
           <p class="post-controls">
-            <button class="input-button" v-on:click="addTodo()">Post</button>
+            <button class="input-button" v-on:click="addTodo()">Add</button>
             <button class="input-button red" v-on:click="addTodo()">Cancel</button>
           </p>
         </section>
         <section class="list-todos">
           <ul>
-            <li v-for="t in todos">{{t}}</li>
+            <li v-for="t in todos">{{t}}
+            <p class="opts"> <button class="btn-remove" v-on:click="removeTodo(t)">&times;</button>
+            </p>
+            </li>
           </ul>
         </section>
       </div>

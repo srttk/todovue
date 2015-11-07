@@ -1,3 +1,4 @@
+"use strict";
 (function(){
 	var app = new Vue({
 		el:'#app',
@@ -13,7 +14,11 @@
 					this.todos.unshift(this.todo);
 					this.todo = '';
 				}
-			}
+			},
+            removeTodo:function(todo){
+                var index = this.todos.indexOf(todo);
+                this.todos.splice(index,1);
+            }
 		}
 	});
 }) ();

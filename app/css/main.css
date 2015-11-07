@@ -9,7 +9,7 @@ body {
 .wrap {
   width: 50%;
   margin: 10px auto;
-  background-color: #ccc;
+  background-color: #ddd;
   padding: 5px 15px;
   border-radius: 3px;
   min-height: 450px; }
@@ -19,15 +19,19 @@ body {
   padding: 5px;
   border: none;
   font-size: 15px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-size: 30px;
+  outline: none;
+  color: #888; }
 
 .input-button {
   background-color: #0687C7;
   border: 1px solid #037FBD;
   font-size: 15px;
-  padding: 2.5px 5px;
+  padding: 8px 5px;
   color: white;
-  border-radius: 3px; }
+  border-radius: 1px;
+  min-width: 100px; }
   .input-button.red {
     background-color: #F94759;
     border: 1px solid #DE4227; }
@@ -36,7 +40,7 @@ body {
   /*margin-top: 5px;
 		margin-bottom: 5px;*/
   float: right;
-  padding: 5px; }
+  padding: 5px 0px; }
 
 .post-area .post-controls:after {
   content: "";
@@ -51,4 +55,16 @@ body {
       background: #fff;
       margin-bottom: 5px;
       padding: 4px;
+      font-size: 30px;
       border-radius: 3px; }
+      .list-todos ul li .opts {
+        float: right;
+        position: relative;
+        top: -3px; }
+        .list-todos ul li .opts .btn-remove {
+          background: none;
+          color: #ccc;
+          border: none;
+          font-size: 36px; }
+        .list-todos ul li .opts:after {
+          clear: right; }
