@@ -16,12 +16,13 @@
 				}
 			},
             removeTodo:function(todo){
-                var index = this.todos.indexOf(todo);
-                this.todos.splice(index,1);
+                //var index = this.todos.indexOf(todo);
+                this.todos.$remove(todo);
             },
             cancelEntry:function(){
             	this.todo = '';
             }
 		}
 	});
-}) ();
+})();
+
